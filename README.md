@@ -16,8 +16,8 @@ The AKM model is used to study the sorting of workers across firms and the dynam
 - `akm.jl` - Julia implementation of the AKM model
 - `AKM.tex` - LaTeX documentation of the theoretical model
 - `AKM.pdf` - Compiled PDF documentation
-- `transition_matrices.png` - Visualization of transition matrices
-- `joint_distribution.png` - Heatmap of the joint distribution of matches
+- `figures/transition_matrices.pdf` - Visualization of transition matrices
+- `figures/joint_distribution.pdf` - Heatmap of the joint distribution of matches
 
 ## Requirements
 
@@ -43,7 +43,7 @@ This will:
 1. Create parameter structures for the model
 2. Generate transition matrices for different worker types
 3. Compute stationary distributions
-4. Generate and save visualization plots
+4. Generate and save visualization plots as PDF files in the `figures/` directory
 
 ### Compiling the Documentation
 
@@ -63,7 +63,7 @@ The model includes the following key parameters:
 
 ## Output
 
-The code generates two main visualizations:
+The code generates two main visualizations saved as PDF files in the `figures/` directory:
 
 1. **Transition Matrices**: Shows how workers of different types transition between firms
 2. **Joint Distribution**: Displays the stationary distribution of worker-firm matches

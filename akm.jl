@@ -85,7 +85,7 @@ function plot_transition_matrices()
     plot(p1, p2, layout=(1,2), size=(1000,400))
     
     # Save the plot
-    savefig("transition_matrices.png")
+    savefig("figures/transition_matrices.pdf")
 end
 
 function plot_joint_distribution()
@@ -106,10 +106,10 @@ function plot_joint_distribution()
     plot!(h, colorbar_title="Probability")
     
     # Save the plot
-    savefig("joint_distribution.png")
+    savefig("figures/joint_distribution.pdf")
 end
 
 # Generate and save the plots
 plot_transition_matrices()
 plot_joint_distribution()
-println("Plots have been saved as 'transition_matrices.png' and 'joint_distribution.png'")
+println("Plots have been saved as 'transition_matrices.pdf' and 'joint_distribution.pdf'")
