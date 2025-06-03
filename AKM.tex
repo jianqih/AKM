@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{listings}   
+\usepackage{xcolor}
+\usepackage{mathpazo}
+\lstset{
+    language=[LaTeX]TeX,
+    basicstyle=\ttfamily,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    tabsize=2,
+    showspaces=false,
+    showstringspaces=false
+}
+
+\begin{document} 
+
+\title{AKM Model}
+\author{2025-05-24}
+\date{}
+\maketitle
+
+% The AKM model is a model of job matching and worker mobility. It is named after the authors Adam, Keuschnigg, and Maskin. 
+
+\section{The Model}
+From a standard human capital wage regression like 
+$$ \ln w_{it} = \beta x_{it} + \epsilon _i t $$
+explains about 30\% of wage variation.
+
+In a series of papers, AKM introduce
+\begin{equation}
+    y_{it} = \alpha _i + \psi _{j(i,t)} + x_{it} \beta + \epsilon_{it}
+\end{equation}
+where $j(i,t)$ is a random variable that takes a value in $\{1,2,\dots,J_t\}$ with probability $p_{jt}$ and $p_{jt}$ is a function of $\alpha_i$ and $\psi_j$.
+
+% In our code, we preset the number of firms and worker types. 
+In AKM's setting, $y_{it}$ is the outcome of person $i$ and observable, $x_{it}$ the observable characteristics of person $i$ at time $t$, 
+$\alpha_i$ the unobservable characteristics of person $i$, $\psi_j$ the unobservable characteristics of firm $j$, and $\epsilon_{it}$ the idiosyncratic shock.
+
+In our model, we preset the unobservable in order to get the characteristics of the workers and firms. 
+The output: $G$ is the transition matrix of workers. $H$ is the joint distribution of workers and firms. 
+They calculate the transition probability matrix $G$ by 
+$$ \psi - c_{net} \psi_j - c_{sort} \alpha_i $$
+where $c_{net}$ is the network effect and $c_{sort}$ is the sorting effect. 
+
+
+
+\end{document}
+
